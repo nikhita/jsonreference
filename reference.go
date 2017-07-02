@@ -74,9 +74,19 @@ func (r *Ref) GetURL() *url.URL {
 	return r.referenceURL
 }
 
+// SetURL sets the URL for this reference
+func (r *Ref) SetURL(url *url.URL) {
+	r.referenceURL = url
+}
+
 // GetPointer gets the json pointer for this reference
 func (r *Ref) GetPointer() *jsonpointer.Pointer {
 	return &r.referencePointer
+}
+
+// SetPointer sets the json pointer for this reference
+func (r *Ref) SetPointer(pointer jsonpointer.Pointer) {
+	r.referencePointer = pointer
 }
 
 // String returns the best version of the url for this reference
